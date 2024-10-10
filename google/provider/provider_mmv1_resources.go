@@ -90,6 +90,7 @@ import (
 	"github.com/hashicorp/terraform-provider-google/google/services/networksecurity"
 	"github.com/hashicorp/terraform-provider-google/google/services/networkservices"
 	"github.com/hashicorp/terraform-provider-google/google/services/notebooks"
+	"github.com/hashicorp/terraform-provider-google/google/services/oracledatabase"
 	"github.com/hashicorp/terraform-provider-google/google/services/orgpolicy"
 	"github.com/hashicorp/terraform-provider-google/google/services/osconfig"
 	"github.com/hashicorp/terraform-provider-google/google/services/oslogin"
@@ -437,9 +438,9 @@ var handwrittenIAMDatasources = map[string]*schema.Resource{
 }
 
 // Resources
-// Generated resources: 468
+// Generated resources: 470
 // Generated IAM resources: 261
-// Total generated resources: 729
+// Total generated resources: 731
 var generatedResources = map[string]*schema.Resource{
 	"google_folder_access_approval_settings":                                     accessapproval.ResourceAccessApprovalFolderSettings(),
 	"google_organization_access_approval_settings":                               accessapproval.ResourceAccessApprovalOrganizationSettings(),
@@ -1002,6 +1003,7 @@ var generatedResources = map[string]*schema.Resource{
 	"google_notebooks_runtime_iam_binding":                                       tpgiamresource.ResourceIamBinding(notebooks.NotebooksRuntimeIamSchema, notebooks.NotebooksRuntimeIamUpdaterProducer, notebooks.NotebooksRuntimeIdParseFunc),
 	"google_notebooks_runtime_iam_member":                                        tpgiamresource.ResourceIamMember(notebooks.NotebooksRuntimeIamSchema, notebooks.NotebooksRuntimeIamUpdaterProducer, notebooks.NotebooksRuntimeIdParseFunc),
 	"google_notebooks_runtime_iam_policy":                                        tpgiamresource.ResourceIamPolicy(notebooks.NotebooksRuntimeIamSchema, notebooks.NotebooksRuntimeIamUpdaterProducer, notebooks.NotebooksRuntimeIdParseFunc),
+	"google_oracle_database_cloud_exadata_infrastructure":                        oracledatabase.ResourceOracleDatabaseCloudExadataInfrastructure(),
 	"google_org_policy_custom_constraint":                                        orgpolicy.ResourceOrgPolicyCustomConstraint(),
 	"google_org_policy_policy":                                                   orgpolicy.ResourceOrgPolicyPolicy(),
 	"google_os_config_patch_deployment":                                          osconfig.ResourceOSConfigPatchDeployment(),
@@ -1043,6 +1045,7 @@ var generatedResources = map[string]*schema.Resource{
 	"google_secret_manager_regional_secret_iam_member":                           tpgiamresource.ResourceIamMember(secretmanagerregional.SecretManagerRegionalRegionalSecretIamSchema, secretmanagerregional.SecretManagerRegionalRegionalSecretIamUpdaterProducer, secretmanagerregional.SecretManagerRegionalRegionalSecretIdParseFunc),
 	"google_secret_manager_regional_secret_iam_policy":                           tpgiamresource.ResourceIamPolicy(secretmanagerregional.SecretManagerRegionalRegionalSecretIamSchema, secretmanagerregional.SecretManagerRegionalRegionalSecretIamUpdaterProducer, secretmanagerregional.SecretManagerRegionalRegionalSecretIdParseFunc),
 	"google_secret_manager_regional_secret_version":                              secretmanagerregional.ResourceSecretManagerRegionalRegionalSecretVersion(),
+	"google_secure_source_manager_branch_rule":                                   securesourcemanager.ResourceSecureSourceManagerBranchRule(),
 	"google_secure_source_manager_instance":                                      securesourcemanager.ResourceSecureSourceManagerInstance(),
 	"google_secure_source_manager_instance_iam_binding":                          tpgiamresource.ResourceIamBinding(securesourcemanager.SecureSourceManagerInstanceIamSchema, securesourcemanager.SecureSourceManagerInstanceIamUpdaterProducer, securesourcemanager.SecureSourceManagerInstanceIdParseFunc),
 	"google_secure_source_manager_instance_iam_member":                           tpgiamresource.ResourceIamMember(securesourcemanager.SecureSourceManagerInstanceIamSchema, securesourcemanager.SecureSourceManagerInstanceIamUpdaterProducer, securesourcemanager.SecureSourceManagerInstanceIdParseFunc),
